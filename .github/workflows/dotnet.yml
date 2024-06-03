@@ -26,10 +26,10 @@ jobs:
       run: dotnet build --no-restore --configuration Release
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: Zip
-      run: Compress-Archive -Path D:\a\CSharpGitHubActions\CSharpGitHubActions\CSharpGitHubActions\bin\Release\* -Destination D:\a\CSharpGitHubActions\CSharpGitHubActions\CSharpGitHubActions\bin\Release.zip
-    - name: Create Release
-      uses: softprops/action-gh-release@v2
-      with:
-        files: D:\a\CSharpGitHubActions\CSharpGitHubActions\CSharpGitHubActions\bin\Release.zip
+    #- name: Zip
+     # run: Compress-Archive -Path D:\a\CSharpGitHubActions\CSharpGitHubActions\CSharpGitHubActions\bin\Release\* -Destination D:\a\CSharpGitHubActions\CSharpGitHubActions\CSharpGitHubActions\bin\Release.zip
+    #- name: Create Release
+     # uses: softprops/action-gh-release@v2
+    #  with:
+     #   files: D:\a\CSharpGitHubActions\CSharpGitHubActions\CSharpGitHubActions\bin\Release.zip
       
