@@ -16,10 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    #- name: Setup .NET
-      #uses: actions/setup-dotnet@v4
-      #with:
-       # dotnet-version: 8.0.x
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
@@ -29,7 +29,7 @@ jobs:
     - name: Zip
       run: Compress-Archive -Path D:\a\CSharpGitHubActions\CSharpGitHubActions\CSharpGitHubActions\bin\Release\* -Destination D:\a\CSharpGitHubActions\CSharpGitHubActions\CSharpGitHubActions\bin\Release.zip
     - name: Create Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         files: D:\a\CSharpGitHubActions\CSharpGitHubActions\CSharpGitHubActions\bin\Release.zip
       
